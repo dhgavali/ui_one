@@ -2,6 +2,7 @@
 
 Credits & Inspiration : 
 @midtone - https://www.instagram.com/midtone.ux/
+Post source - https://www.instagram.com/p/CmoN-aojN4q/
 I have used his design and tried to implement it in flutter. 
 
 
