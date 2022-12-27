@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       bottomSheet: Container(
-        height: 370,
+        height: 300,
         decoration: BoxDecoration(
           color: Colors.grey[900],
           borderRadius: const BorderRadius.only(
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
         ),
         child: Column(children: [
           Padding(
-            padding: const EdgeInsets.only(left: 24.0, top: 24, right: 24),
+            padding: const EdgeInsets.only(left: 24.0, top: 35, right: 24),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -64,6 +64,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          SizedBox(height: 5),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 24),
             alignment: Alignment.centerLeft,
@@ -77,17 +78,62 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(height: 1),
+          SizedBox(height: 15),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 24),
             alignment: Alignment.centerLeft,
             child: Text(
-              "AirPods Pro have been designed to deliver Active Noise Cancellation for immersive sounds. Transparency mode so you can hear your surroundings.",
+              "Airpods Pro have been designed to deliver Active Noise Cancellation for immersive sounds. Transparency mode so you can hear your surroundings.",
               textAlign: TextAlign.left,
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.white54,
               ),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  " \$ 250",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.blue.shade700,
+                  ),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 15,
+                    vertical: 10,
+                  ),
+                  child: Row(children: const [
+                    Text(
+                      "Add to Cart",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.white,
+                      size: 14,
+                    )
+                  ]),
+                )
+              ],
             ),
           )
         ]),
@@ -95,8 +141,8 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Container(
             padding: EdgeInsets.symmetric(
-              horizontal: 0,
-              vertical: 24,
+              horizontal: 24,
+              vertical: 30,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -116,7 +162,7 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 Container(
-                  height: 300,
+                  height: 350,
                   child: PageView(
                     controller: PageController(
                       initialPage: 0,
@@ -196,12 +242,12 @@ class AirpodImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 300,
+      height: 350,
       alignment: Alignment.center,
       child: Image.asset(
         img_array[index],
-        width: 250,
-        height: 250,
+        width: 300,
+        height: 300,
       ),
     );
   }
